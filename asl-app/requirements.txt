@@ -1,0 +1,10 @@
+flask
+flask-sqlalchemy
+gunicorn
+mediapipe
+numpy
+opencv-python
+psycopg2-binary
+sqlalchemy
+tensorflow
+email-validator

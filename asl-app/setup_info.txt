@@ -1,0 +1,26 @@
+=== ASL Translator Web Application Setup Guide ===
+
+1. Create a virtual environment (recommended):
+   python -m venv venv
+   source venv/bin/activate
+
+2. Get dependencies from requirements.txt
+
+3. Set up database:
+   - Make sure PostgreSQL is running
+   - Set the DATABASE_URL environment variable
+   - Tables will be created automatically
+
+4. Run the application:
+   gunicorn --bind 0.0.0.0:5000 --reload main:app
+   or
+   python app.py
+
+5. Open in browser:
+   http://localhost:5000
+
+=== Usage Instructions ===
+1. Click 'Start' to enable webcam
+2. Make ASL hand gestures (A-Z)
+3. Hold gestures steady for recognition
+4. View progress in the dashboard

@@ -1,0 +1,80 @@
+/* Video container styling */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.video-container video,
+.video-container canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Detection result styling */
+.detection-result {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#detected-sign {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Recognized text area styling */
+.recognized-text {
+    min-height: 120px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--bs-dark);
+    margin-bottom: 10px;
+    overflow-y: auto;
+}
+
+.recognized-signs .badge {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+}
+
+/* Loading indicator */
+#loading-indicator {
+    z-index: 10;
+}
+
+/* Supported signs grid */
+#supported-signs .card {
+    transition: transform 0.2s;
+}
+
+#supported-signs .card:hover {
+    transform: scale(1.05);
+    background-color: var(--bs-primary-bg-subtle);
+}
+
+#supported-signs h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #detected-sign {
+        font-size: 3rem;
+    }
+    
+    .recognized-signs .badge {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+    
+    #supported-signs h3 {
+        font-size: 1.5rem;
+    }
+}
